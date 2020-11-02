@@ -10,16 +10,14 @@
     <header>
         <nav>
             <h1>
-                <a href="home.php">
-                    PHP ORIENTADO A OBJETOS
+                <a href="<?=BASE_DIR?>Home/showHome">
+                    Usuarios
                 </a>
             </h1>
         
             <ul>
-                <li><a href="<?=BASE_DIR?>Home/showHome">Home</a></li>
-                <li><a href="<?=BASE_DIR?>Usuario/register">Register</a></li>
-                <li><a href="<?=BASE_DIR?>About/showAbout">About</a></li>
-                <li><a href="<?=BASE_DIR?>Contact/showContact">Contact</a></li>
+                <li><a href="<?=BASE_DIR?>Home/showHome">Inicio</a></li>
+                <li><a href="<?=BASE_DIR?>User/showUser">Listado</a></li>
             </ul>
         </nav>
     </header>
