@@ -16,7 +16,7 @@
                 return $this->conn;
 
             } catch (Exception $e) {
-                print "!Error¡: " . $e->getMessage() . "</br>";
+                print "¡Error!: " . $e->getMessage() . "</br>";
                 die();
             }
         }
