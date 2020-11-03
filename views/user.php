@@ -41,51 +41,21 @@
                         <th>Departamento</th>
                         <th>municipio</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>JS</td>
-                        <td>Administrador</td>
-                        <td>San Miguel</td>
-                        <td>San Miguel</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>JSS</td>
-                        <td>Administrador</td>
-                        <td>San Miguel</td>
-                        <td>San Miguel</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>JSSS</td>
-                        <td>Administrador</td>
-                        <td>San Miguel</td>
-                        <td>San Miguel</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>JSSSS</td>
-                        <td>Administrador</td>
-                        <td>San Miguel</td>
-                        <td>San Miguel</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>JSSSSS</td>
-                        <td>Administrador</td>
-                        <td>San Miguel</td>
-                        <td>San Miguel</td>
-                    </tr>
+                    <?php
+                    foreach($listado as $row=>$list){
+                    ?>
+                        <tr>
+                        <td><?=$list['id_usuario']?></td>
+                        <td><?=$list['nombre_usuario']?></td>
+                        <td><?=$list['apellido_usuario']?></td>
+                        <td><?=$list['user_usuario']?></td>
+                        <td><?=$list['rol_usuario']?></td>
+                        <td><?=$list['nombre_departamento']?></td>
+                        <td><?=$list['nombre_municipio']?></td>
+                    </tr><?php
+                    
+                    };
+                    ?>
                 </table>
             </div>
         </form>
