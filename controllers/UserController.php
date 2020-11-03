@@ -6,6 +6,9 @@ class UserController { //Clase para controladores de usuario
         $user = new User(); //Instanciamos el objeto de usuario
         //$showUser = $user->showUser(); //Obtenemos la vista con el metodo de usuario
         $listado = $user->getAll();
+        $departamentos = $user->getDepartamentos();
+        $roles = $user->getRol();
+        $municipios = $user->getMunicipios();
         require_once "views/user.php"; //Requerimos la vista para mostrarla
     }
 
@@ -14,6 +17,9 @@ class UserController { //Clase para controladores de usuario
         $user = new User(); //Instanciamos el objeto de usuario
         //$showUser = $user->showUser(); //Obtenemos la vista con el metodo de usuario
         $listado = $user->getFilter("","Moderador");
+        $departamentos = $user->getDepartamentos();
+        $roles = $user->getRol();
+        $municipios = $user->getMunicipios();
         require_once "views/user.php"; //Requerimos la vista para mostrarla
     }
 }

@@ -125,4 +125,27 @@ class User extends Database { //Clase de usuario
         }
     }
     
+    public function getDepartamentos(){
+        $sql = "SELECT nombre_departamento FROM departamento";
+        if ($result = $this->conn->query($sql)) {
+        $data = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+        }
+    }
+
+    public function getMunicipios(){
+        $sql = "SELECT nombre_municipio FROM municipio";
+        if ($result = $this->conn->query($sql)) {
+        $data = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+        }
+    }
+
+    public function getRol(){
+        $sql = "SELECT rol_usuario FROM usuario GROUP BY rol_usuario";
+        if ($result = $this->conn->query($sql)) {
+        $data = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+        }
+    }
 }

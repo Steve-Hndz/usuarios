@@ -11,22 +11,37 @@
                 </select>
 
                 <select name="rol" id="rol">
-                    <option value="">Item 1</option>
-                    <option value="">Item 2</option>
-                    <option value="">Item 3</option>
+                    <option value="">Roles</option>
+                        <?php
+                        foreach($roles as $row=>$rol){
+                            ?>
+                            <option value="<?= $rol['rol_usuario']?>"><?= $rol['rol_usuario']?></option>
+                            <?php
+                        }
+                        ?>
                 </select>
             </div>
             <div class="form__group">
                 <select name="departamento" id="departamento">
-                    <option value="">Item 1</option>
-                    <option value="">Item 2</option>
-                    <option value="">Item 3</option>
+                    <option value="">Departamento</option>
+                    <?php
+                    foreach($departamentos as $row=>$depa){
+                        ?>
+                        <option value="<?= $depa['nombre_departamento']?>"><?= $depa['nombre_departamento']?></option>
+                        <?php
+                    }
+                    ?>
                 </select>
 
                 <select name="municipio" id="municipio">
-                    <option value="">Item 1</option>
-                    <option value="">Item 2</option>
-                    <option value="">Item 3</option>
+                    <option value="">Municipio</option>
+                        <?php
+                        foreach($municipios as $row=>$muni){
+                            ?>
+                            <option value="<?= $muni['nombre_municipio']?>"><?= $muni['nombre_municipio']?></option>
+                            <?php
+                        }
+                        ?>
                 </select>
             </div>
 
