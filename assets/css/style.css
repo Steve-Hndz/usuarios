@@ -10,6 +10,13 @@
 }
 /* Limpiar estilos generales */
 
+/* Limpiar estilos del body*/
+body {
+    padding: 0;
+    margin: 0;
+}
+/* Limpiar estilos del body*/
+
 /* Estilos de navbar principal */
 nav {
     position: fixed;
@@ -18,6 +25,7 @@ nav {
     z-index: 100;
     background: #151515;
     padding: 5px 40px;
+    box-shadow: 0px 0px 51px -16px rgba(0,0,0,0.8);
 }
 /* Estilos de navbar principal */
 
@@ -81,10 +89,17 @@ nav ul li.logo {
 }
 /* Estilos del logo o titulo*/
 
+/* Estilos del logo o titulo*/
+nav ul li.logo span {
+    color: crimson;
+    font-weight: 500;
+}
+/* Estilos del logo o titulo*/ 
+
 /* Estilos de los enlaces*/
 nav ul li a {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     transition: .4s;
 }
@@ -117,13 +132,174 @@ nav ul li.btn.hide i:before {
 
 /* Estilos predeterminados del main*/
 main {
-    margin-top: 70px;
-    padding: 25px;
-    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-top: 68px;
+    padding: 15px 35px;
+    background-color: #1f1f1f;
     width: 100%;
     height: 90vh;
 }
 /* Estilos predeterminados del main*/
+
+/* Contenedor de texto*/
+.container {
+    padding: 25px 0px;
+    background-color: #2b2b2b;
+    color: aliceblue;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 51px -12px rgba(0,0,0,0.8);
+}
+/* Contenedor de texto*/
+
+/* Titulo del contenedor*/
+.container h1 {
+    color: crimson;
+    text-shadow: black;
+    font-size: 54px;
+    margin-bottom: 10px;
+}
+/* Titulo del contenedor*/
+
+/* Subtitulo del contenedor*/
+.container h2 {
+    font-size: 36px;
+    margin: 10px 0px;
+}
+/* Subtitulo del contenedor*/
+
+/* Subtitulo del contenedor*/
+.container h3 {
+    font-size: 28px;
+    margin: 10px 0px;
+}
+/* Subtitulo del contenedor*/
+
+/* Parrafo del contenedor*/
+.container p {
+    font-size: 24px;
+}
+/* Parrafo del contenedor*/
+
+/* Estilos de formulario*/
+.form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+/* Estilos de formulario*/
+
+/* Estilos por grupo de formulario*/
+.form__group {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* Estilos por grupo de formulario*/
+
+/* Estilos de combo*/
+.form select {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px 5px;
+    text-align: center;
+    background-color: aliceblue;
+    font-weight: 600;
+    color: #292929;
+    outline: none;
+}
+/* Estilos de combo*/
+
+/* Estilos de opcion de combo*/
+.form select option {
+    background-color: #303030;
+    color: aliceblue;
+}
+/* Estilos de opcion de combo*/
+
+/* Base del form para el scroll*/
+.form__base {
+    margin: 15px 0px;
+    overflow: scroll;
+    width: 100%;
+    height: 40vh;
+}
+/* Base del form para el scroll*/
+
+/* Estilos de la tabla*/
+.form__table {
+    width: auto;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+/* Estilos de la tabla*/
+
+/* Estilos de linea para tabla*/
+.form__table td {
+    text-align: left;
+    width: 180px;
+    padding: 10px;
+}
+/* Estilos de linea para tabla*/
+
+/* Estilos de linea de titulo para tabla*/
+.form__table th {
+    padding: 15px;
+}
+/* Estilos de linea de titulo para tabla*/
+
+/* Estilos de celdas*/
+.form__table tr {
+    background-color: #414141;
+}
+/* Estilos de celdas*/
+  
+/* Estilos intercalados para celdas*/
+.form__table tr:nth-child(even) {
+    background-color: #96969669;
+}
+/* Estilos intercalados para celdas*/
+
+/* Estilos de botones*/
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: crimson;
+    color: aliceblue;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+/* Estilos de botones*/
+
+/* Estilos de hover para botones*/
+button:hover {
+    padding: 5px 30px;
+    background-color: #fd2b55;
+}
+/* Estilos de hover para botones*/
+
+/* Estilos de etiquet para botones*/
+button a {
+    font-size: x-large;
+    font-weight: 600;
+    text-decoration: none;
+    color: aliceblue;
+}
+/* Estilos de etiquet para botones*/
 
 
 /* Estilos del footer*/
@@ -170,6 +346,7 @@ footer {
     /* Estilo hover de listado para modo movil*/
     nav ul li.items:hover {
         border-radius: 5px;
+        background-color: #2c2c2c;
     }
     /* Estilo hover de listado para modo movil*/
 
@@ -178,5 +355,42 @@ footer {
         opacity: 0;
     }
     /* Estilo linea de hover de listado para modo movil*/
+
+    /* Contenedor de texto*/
+    .container {
+        padding: 25px;
+        height: auto;
+    }
+    /* Contenedor de texto*/
+
+    /* Titulo del contenedor*/
+    .container h1 {
+        font-size: 48px;
+    }
+    /* Titulo del contenedor*/
+
+    /* Parrafo del contenedor*/
+    .container p {
+        font-size: 18px;
+    }
+    /* Parrafo del contenedor*/
+
+    /* Subtitulo del contenedor*/
+    .container h3 {
+        font-size: 22px;
+    }
+    /* Subtitulo del contenedor*/
+
+    /* Base del form para el scroll*/
+    .form__base {
+        height: 30vh;
+    }
+    /* Base del form para el scroll*/
+
+    /* Estilos por grupo de formulario*/
+    .form__group {
+        flex-direction: column;
+    }
+    /* Estilos por grupo de formulario*/
 }
 /* MEDIA QUERY PARA DISPOSITIVOS MOVILES*/

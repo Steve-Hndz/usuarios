@@ -1,6 +1,9 @@
+<main class="principal">
+    <div class="container">
+        <h1>Bievenido al registro de usuarios</h1>
+        <p>Aquí te mostraremos un listado de usuarios en la cual podrás trabajar con distintos filtros para poder encontrar cada uno de ellos de manera más efectiva.</p>
+        <h3>Te mostramos como listar tus usuarios de una manera más sencilla</h3>
 
-
-    <main>
-        <h1>Página principal</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nisi mollitia eveniet consequuntur maiores? Autem quos, dolorum dolorem dolore adipisci, laudantium et id, mollitia quis nulla totam suscipit? Atque, expedita.</p>
-    </main>
+        <button><a href="<?=BASE_DIR;?>User/showUser">Ver listado</a></button>
+    </div>
+</main>

@@ -14,7 +14,7 @@
     <header>
         <nav>
             <ul>
-                <li class="logo">USERZ</li>
+                <li class="logo"><a href="<?=BASE_DIR;?>Home/showHome">USER<span>Z</span></a></li>
                 <li class="items"><a href="<?=BASE_DIR;?>Home/showHome">Inicio</a></li>
                 <li class="items"><a href="<?=BASE_DIR;?>User/showUser">Listado</a></li>
                 <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
