@@ -1,77 +1,182 @@
+/* Import de la famila de fuentes que se utilizara >> Montserrat*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+/* Limpiar estilos generales */
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
 }
-body, html {
-    height: 100%;
-    background-color: #bbe1fa;
-}
+/* Limpiar estilos generales */
 
-header {
-    box-sizing: border-box;
-    display: block;
-    background-color: #1b262c;
+/* Estilos de navbar principal */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: #151515;
+    padding: 5px 40px;
 }
+/* Estilos de navbar principal */
 
-header>nav>h1 {
-    box-sizing: border-box;
-    padding: 20px;
-    font-size: 1rem;
-    display: inline-block;
-}
-header>nav>h1>a {
-    color: azure;
-    text-decoration-line: none;
-}
-header>nav{
-    box-sizing: border-box;
-    overflow: auto;
-   
-}
-header>nav>ul {
-    box-sizing: border-box;
-    width: auto;
-    float: right;
-    
-   
-}
-header>nav>ul li {
-    height: auto;
-    display: inline-block;
+/* Estilos de lista */
+nav ul {
     list-style: none;
-    padding: 20px;
-    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-header>nav>ul li:hover{
-    background-color: #0f4c75;
-    
+/* Estilos de lista */
+
+/* Estilos de item para lista*/
+nav ul li {
+    padding: 15px 0;
+    cursor: pointer;
 }
-header>nav>ul li a {
-    height: 100%;
-    color: azure;
-    text-decoration-line: none;
-    
-}
-main{
-    margin: 0 auto;
-    width: 80%;
-    height: 100%;
-    clear: both;
-}
-main>h1 {
+/* Estilos de item para lista*/
+
+/* Estilos de la clase item*/
+nav ul li.items {
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    font-weight: 500;
     text-align: center;
-    font-size: 3.5rem;
-    margin-top: 15%;
+    order: 3;
 }
-main>p {
-    text-align: center;
+/* Estilos de la clase item*/
+
+/* Estilos para simular borde interior de la clase item*/
+nav ul li.items:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background:crimson;
+    opacity: 0;
+    transition: all 0.1s ease-in;
 }
+/* Estilos para simular borde interior de la clase item*/
+
+/* Estilos de hover para simular borde interior de la clase item*/
+nav ul li.items:hover:after {
+    opacity: 1;
+    bottom: 8px;
+}
+/* Estilos de hover para simular borde interior de la clase item*/
+
+/* Estilos del logo o titulo*/
+nav ul li.logo {
+    flex: 1;
+    color: white;
+    font-size: 23px;
+    font-weight: 900;
+    cursor: default;
+    user-select: none;
+}
+/* Estilos del logo o titulo*/
+
+/* Estilos de los enlaces*/
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .4s;
+}
+/* Estilos de los enlaces*/
+
+/* Estilos de hover de los enlaces*/
+nav ul li:hover a {
+    color: crimson;
+}
+/* Estilos de hover de los enlaces*/
+
+/* Estilos de icono burger*/
+nav ul li i {
+    font-size: 23px;
+}
+/* Estilos de icono burger*/
+
+/* Ocultar en modo escritorio el icono burger*/
+nav ul li.btn {
+    display: none;
+}
+/* Ocultar en modo escritorio el icono burger*/
+
+/* Codigo para obtener icono burger*/
+nav ul li.btn.hide i:before {
+    content: '\f00d';
+}
+/* Codigo para obtener icono burger*/
+
+
+/* Estilos predeterminados del main*/
+main {
+    margin-top: 70px;
+    padding: 25px;
+    background-color: aliceblue;
+    width: 100%;
+    height: 90vh;
+}
+/* Estilos predeterminados del main*/
+
+
+/* Estilos del footer*/
 footer {
-    color: azure;
-    background-color: #1b262c;
-    padding: 15px 20px;
+    color: aliceblue;
+    background-color: #292929;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
-input {
-    margin-top: 15%;
+/* Estilos del footer*/
+
+
+/* MEDIA QUERY PARA DISPOSITIVOS MOVILES*/
+@media all and (max-width: 768px) {
+    /* Configuracion de padding del navbar para moviles*/
+    nav {
+        padding: 5px 30px;
+    }
+    /* Configuracion de padding del navbar para moviles*/
+
+    /* Configuracion de items, ocultandose para moviles*/
+    nav ul li.items {
+        width: 100%;
+        display: none;
+    }
+    /* Configuracion de items, ocultandose para moviles*/
+
+    /* Mostrara los items en el nav para moviles*/
+    nav ul li.items.show {
+        display: block;
+    }
+    /* Mostrara los items en el nav para moviles*/
+
+    /* Mostrara el icono burger para moviles*/
+    nav ul li.btn {
+        display: block;
+    }
+    /* Mostrara el icono burger para moviles*/
+
+    /* Estilo hover de listado para modo movil*/
+    nav ul li.items:hover {
+        border-radius: 5px;
+    }
+    /* Estilo hover de listado para modo movil*/
+
+    /* Estilo linea de hover de listado para modo movil*/
+    nav ul li.items:hover:after {
+        opacity: 0;
+    }
+    /* Estilo linea de hover de listado para modo movil*/
 }
+/* MEDIA QUERY PARA DISPOSITIVOS MOVILES*/
