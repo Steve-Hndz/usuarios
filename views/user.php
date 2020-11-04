@@ -1,6 +1,6 @@
 <main class="principal">
     <div class="container">
-        <form action="" class="form">
+        <form action="<?=BASE_DIR."User/showUser"?>" method="POST" class="form">
             <h2>Lista de Usuarios</h2>
 
             <div class="form__group">
@@ -73,6 +73,7 @@
                     ?>
                 </table>
             </div>
+            <button type="submit">Enviar</button>
         </form>
     </div>
 </main>
