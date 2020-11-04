@@ -5,9 +5,14 @@
 
             <div class="form__group">
                 <select name="alfabeto" id="alfabeto">
-                    <option value="">Item 1</option>
-                    <option value="">Item 2</option>
-                    <option value="">Item 3</option>
+                    <option value="">Alfabeto</option>
+                    <?php
+                            foreach($this->alfabeto as $lyric){
+                                ?>
+                                <option value="<?= $lyric?>"><?= $lyric?></option>
+                                <?php
+                            }
+                            ?>
                 </select>
 
                 <select name="rol" id="rol">
