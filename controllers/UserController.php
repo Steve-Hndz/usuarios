@@ -11,10 +11,10 @@ class UserController { //Clase para controladores de usuario
         $departamentos = $user->getDepartamentos();
         $roles = $user->getRol();
         $municipios = $user->getMunicipios();
-        if(isset($_POST)){
-            $listado = $user->getFilter($_POST['alfabeto'],$_POST['departamento'],$_POST['municipio'],$_POST['rol']);
-        } else{
+        if($_POST['alfabeto']=="" && $_POST['departamento']=="" && $_POST['municipio']=="" && $_POST['rol']==""){
             $listado = $user->getAll();
+        } else{
+            $listado = $user->getFilter($_POST['alfabeto'],$_POST['departamento'],$_POST['municipio'],$_POST['rol']);
         }
         
         require_once "views/user.php"; //Requerimos la vista para mostrarla
