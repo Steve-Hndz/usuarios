@@ -146,6 +146,7 @@ main {
 
 /* Contenedor de texto*/
 .container {
+    border-radius: 5px;
     padding: 25px 0px;
     background-color: #2b2b2b;
     color: aliceblue;
@@ -155,7 +156,8 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 0px 0px 51px -12px rgba(0,0,0,0.8);
+    box-shadow: 0 0 5px crimson,
+                0 0 10px #f0204a;
 }
 /* Contenedor de texto*/
 
@@ -213,13 +215,15 @@ main {
     width: 100%;
     border: none;
     border-radius: 5px;
-    margin: 5px;
+    margin: 8px;
     padding: 10px 5px;
     text-align: center;
-    background-color: aliceblue;
+    background-color: #e6e6e6;
     font-weight: 600;
     color: #292929;
     outline: none;
+    box-shadow: 0 0 5px #e6e6e6,
+                0 0 10px #ffffff;
 }
 /* Estilos de combo*/
 
@@ -238,6 +242,20 @@ main {
     height: 40vh;
 }
 /* Base del form para el scroll*/
+
+/* Estilos para scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: crimson;
+    box-shadow: inset 0 0 6px crimson;
+}
+/* Estilos para scrollbar*/
 
 /* Estilos de la tabla*/
 .form__table {
@@ -289,6 +307,8 @@ button {
 button:hover {
     padding: 5px 30px;
     background-color: #fd2b55;
+    box-shadow: 0 0 5px crimson,
+                0 0 10px #f0204a;
 }
 /* Estilos de hover para botones*/
 
