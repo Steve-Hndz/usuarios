@@ -14,7 +14,7 @@ class User extends Database { //Clase de usuario
 
     public function getAll(){
         $sql = "SELECT u.id_usuario, u.nombre_usuario, u.apellido_usuario, u.user_usuario, u.rol_usuario, d.nombre_departamento, m.nombre_municipio, u.id_colonia FROM " . self::TABLE_NAME." u ";
-        $sql .= " INNER JOIN departamento d on d.id_departamento = u.id_departamento INNER JOIN municipio m on m.id_municipio = u.id_municipio ORDER BY u.id_usuario ASC";
+        $sql .= " INNER JOIN departamento d on d.id_departamento = u.id_departamento INNER JOIN municipio m on m.id_municipio = u.id_municipio ORDER BY u.nombre_usuario ASC";
         if ($result = $this->conn->query($sql)) {
         $data = $result->fetchAll(PDO::FETCH_ASSOC);
         return $data;
